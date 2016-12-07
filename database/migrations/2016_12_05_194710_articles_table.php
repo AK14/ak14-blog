@@ -19,8 +19,9 @@ class ArticlesTable extends Migration
             $table->string('title', 45)->nullable();
             $table->text('text')->nullable();
             $table->string('description', 150)->nullable();
+            $table->timestamps();
 
-            $table->foreign('author', 'FK_author_idx')
+            $table->foreign('author')
                 ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');

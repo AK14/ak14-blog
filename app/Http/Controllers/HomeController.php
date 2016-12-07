@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// модели
+use App\Articles;
+
+// подключаем фассад для работы с БД
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -21,8 +26,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Articles $art)
     {
-        return view('home');
+        $articles = $art->paginate(5);
+        return view('home',compact('articles'));
     }
 }
