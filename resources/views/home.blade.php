@@ -13,7 +13,8 @@
                 <div class="list-group-item">
                 <h3 class="list-group-item-heading">{{$article->title}}</h3>
                 <p class="list-group-item-text">{{$article->description}}</p>
-                <p class="text-info">{{$article->author()->name}}</p>
+                <p class="text-info">{{$article->author()->name}}
+                    в категории: {{$article->categories()->title}} </p>
                 </div>
             @endforeach
         @endif
