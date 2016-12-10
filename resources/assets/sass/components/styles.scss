@@ -76,14 +76,43 @@
 // Цвета которые я использую
 $text:rgba(99,107,111,1);
 $fiolent:rgb(163,67,158);
-$menu-color: linear-gradient(48deg,rgb(163,67,158),rgb(225,93,218), rgb(255, 56, 228));
+$fiolent_gradient: linear-gradient(48deg,rgb(163,67,158),rgb(225,93,218), rgb(255, 56, 228));
 
 #menu{
-  background: $menu-color;
+  background:$fiolent_gradient;
   a{
     color: white;
   }
 }
+
+.navbar{
+  .navbar-nav{
+    .dropdown {
+      a{
+        &:focus{
+        background: none !important;
+      }
+      }
+    }
+
+
+
+    .dropdown-menu{
+    background: $fiolent_gradient;
+    color: white;
+      a{
+        &:hover{
+          background: $fiolent_gradient;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
 
 // верхний блок идущий сразу после меню на главной странице
 .about_block{

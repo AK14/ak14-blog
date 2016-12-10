@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container">
-    <div class="page-header">
+    <header class="page-header">
        <h1>Hello World</h1>
         I am Alexander Konopatsky. I'm 30 yeas old
-    </div>
+    </header>
     <div class="list-group col-md-8 col-md-offset-1">
         @if(isset($articles))
             <h2 class="text-danger">Последние записи в моем блоге</h2>

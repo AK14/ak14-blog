@@ -9,6 +9,21 @@
   color: white;
 }
 
+.navbar .navbar-nav .dropdown a:focus {
+  background: none !important;
+}
+
+.navbar .navbar-nav .dropdown-menu {
+  background: -webkit-linear-gradient(42deg, #a3439e, #e15dda, #ff38e4);
+  background: linear-gradient(48deg, #a3439e, #e15dda, #ff38e4);
+  color: white;
+}
+
+.navbar .navbar-nav .dropdown-menu a:hover {
+  background: -webkit-linear-gradient(42deg, #a3439e, #e15dda, #ff38e4);
+  background: linear-gradient(48deg, #a3439e, #e15dda, #ff38e4);
+}
+
 .about_block {
   background-image: url("../../bgImg/basketball-court.png");
   background-size: contain;
