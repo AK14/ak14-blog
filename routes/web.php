@@ -12,6 +12,7 @@
 */
 
 Route::get('/','HomeController@index');
+Route::get('articles/{articles}','articlesController@show');
 
 
 Auth::routes();
