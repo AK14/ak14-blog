@@ -1,6 +1,16 @@
+// Мой набор цветовой палитры
+$purple:rgb(163,67,158);
+$pink:rgb(255,56,228);
+$beth:mix($purple,$pink,60%);
+$text_gray:rgba(104,104,104,1);
+
+$purple_gradient: linear-gradient(48deg,$purple,$beth, $pink);
+
+$gray: #eee;
+
 
 // Body
-$body-bg: #f5f8fa;
+$body-bg: rgba(232,232,232,1);
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
@@ -17,21 +27,38 @@ $brand-warning: #cbb956;
 $brand-danger:  #bf5329;
 
 // Typography
-$font-family-sans-serif: "Raleway", sans-serif;
+$font-family-sans-serif: "Arimo", sans-serif;
 $font-size-base: 14px;
 $line-height-base: 1.6;
-$text-color: #636b6f;
+$text-color: $text_gray;
 
 // Navbar
-$navbar-default-bg: #fff;
+.navbar-default{
+  background: $purple_gradient;
+    a{
+      color: white !important;
+    }
+  }
 
 // Buttons
-$btn-default-color: $text-color;
+  $btn-default-color: $text-color;
 
 // Inputs
-$input-border: lighten($text-color, 40%);
-$input-border-focus: lighten($brand-primary, 25%);
-$input-color-placeholder: lighten($text-color, 30%);
+  $input-border: lighten($text-color, 40%);
+  $input-border-focus: lighten($brand-primary, 25%);
+  $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
-$panel-default-heading-bg: #fff;
+//  $panel-default-heading-bg: lighten($purple,30%);
+  .panel-default{
+    .panel-heading{
+      background: $purple_gradient;
+    }
+    .panel-body{
+      background: rgba(205,205,205,0.8);
+    }
+  }
+
+
+
+

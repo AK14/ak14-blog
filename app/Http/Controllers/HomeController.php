@@ -26,7 +26,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Articles $articles,Categories $categories)
+    public function index(Articles $articles,Categories $categories,Request $request)
     {
         $articles = $articles->paginate(5);
         $categories = $categories->all();

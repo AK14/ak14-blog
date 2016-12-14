@@ -6,9 +6,9 @@
        <h1>Hello World</h1>
         I am Alexander Konopatsky. I'm 30 yeas old
     </header>
-    <section class="list-group col-md-8 col-md-offset-1">
+    <section class="list-group col-md-8 col-md-offset-1" id="articles">
         @if(isset($articles))
-            <h2 class="text-danger">Последние записи в моем блоге</h2>
+            <h2>Последние записи на моем блоге</h2>
             @foreach($articles as $article)
                 <div class="list-group-item">
                 <h3 class="list-group-item-heading">{{$article->title}}</h3>
@@ -27,14 +27,13 @@
             @endforeach
         @endif
     </section>
-    <aside class="col-md-3">
-        <h3>Категории</h3>
+    <aside class="col-md-3" id="right_bar">
+        <h2>Категории</h2>
         <div class="list-group">
         @foreach($categories as $cat)
-                <a href="#" class="list-group-item">
-                <h4 class="list-group-item-heading">{{$cat->title}}</h4>
-                </a>
-
+            <a href="categories/{{$cat->id}}" class="list-group-item">
+            <h4 class="list-group-item-heading text-right">{{$cat->title}}</h4>
+            </a>
         @endforeach
         </div>
     </aside>

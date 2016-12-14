@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-default navbar-static-top" id="menu">
+<nav class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header">
         <!-- Collapsed Hamburger -->
