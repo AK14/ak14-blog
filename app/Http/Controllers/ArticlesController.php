@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 class articlesController extends Controller
 {
     public function show(Articles $articles){
-        
+
+        return view('layouts.articles', compact('articles'));
     }
 }

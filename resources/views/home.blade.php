@@ -27,6 +27,8 @@
             @endforeach
         @endif
     </section>
+
+    {{-- Нужно вынестиэтот код в оттдельный, подключаемый файл--}}
     <aside class="col-md-3">
         <h3>Категории</h3>
         <div class="list-group">
@@ -38,5 +40,6 @@
         @endforeach
         </div>
     </aside>
+
 </div>
 @endsection
