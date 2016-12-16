@@ -23,36 +23,31 @@
   }
 }
 
+
 // правый сайд-бар
   #right_bar{
     .list-group{
       .list-group-item{
       background: $gray;
         &:hover {
-        background: darken($gray, 20%);
+        background: rgba(209, 209, 209, 0.6);
         }
       }
     }
   }
 
+
+
   .panel{
-    .panel-heading{
-      color: white !important;
-      font-size: large;
-    }
+
     .panel-body{
       input{
         color: black;
       }
+
     }
     a{
       color: $beth;
-    }
-    button{
-      background-color: $purple;
-      &:hover{
-        background-color: darken($purple,15%);
-      }
     }
   }
 
@@ -61,8 +56,9 @@
 
     .list-group{
       .list-group-item{
-        background: rgba(255,255,255,0.2);
-        border: none;
+        background: rgba(209, 209, 209, 0.6);
+        border: 1px double;
+        margin: 10px;
       }
     }
 

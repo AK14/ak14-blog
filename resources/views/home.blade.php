@@ -10,7 +10,7 @@
         @if(isset($articles))
             <h2>Последние записи на моем блоге</h2>
             @foreach($articles as $article)
-                <div class="list-group-item">
+                <a href="articles/{{$article->id}}" class="list-group-item">
                 <h3 class="list-group-item-heading">{{$article->title}}</h3>
                 <p class="list-group-item-text">{{$article->description}}</p>
                 <p class="text-info">{{$article->author()->name}}
@@ -23,7 +23,7 @@
                      {{$article->getCategories()->first()->title}} </p>
                     @endif
                     {{$article->comments()->count()}}
-                </div>
+                </a>
             @endforeach
         @endif
     </section>
