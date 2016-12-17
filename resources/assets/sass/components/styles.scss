@@ -53,13 +53,14 @@
 
 
   /* Стиль для list-group для Articles */
-
-    .list-group{
+   .list-group %articles{
       .list-group-item{
-        background: rgba(209, 209, 209, 0.6);
+        background: red;
         border: 1px double;
         margin: 10px;
       }
     }
+
+
 
 

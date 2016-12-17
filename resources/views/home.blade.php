@@ -27,8 +27,10 @@
             @endforeach
         @endif
     </section>
-    <aside class="col-md-3" id="right_bar">
-        <h2>Категории</h2>
+
+ Нужно вынестиэтот код в оттдельный, подключаемый файл--}}
+    <aside class="col-md-3">
+        <h3>Категории</h3>
         <div class="list-group">
         @foreach($categories as $cat)
             <a href="categories/{{$cat->id}}" class="list-group-item">
@@ -37,5 +39,6 @@
         @endforeach
         </div>
     </aside>
+
 </div>
 @endsection

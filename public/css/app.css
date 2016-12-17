@@ -114,12 +114,6 @@
 }
 
 /* Стиль для list-group для Articles */
-.list-group .list-group-item {
-  background: rgba(209, 209, 209, 0.6);
-  border: 1px double;
-  margin: 10px;
-}
-
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
