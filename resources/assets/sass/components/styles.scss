@@ -27,8 +27,11 @@
 // правый сайд-бар
   #right_bar{
     .list-group{
+
       .list-group-item{
-      background: $gray;
+        height: 30px;
+        border: none;
+        background: inherit;
         &:hover {
         background: rgba(209, 209, 209, 0.6);
         }
@@ -39,12 +42,10 @@
 
 
   .panel{
-
     .panel-body{
       input{
         color: black;
       }
-
     }
     a{
       color: $beth;
@@ -52,14 +53,14 @@
   }
 
 
-  /* Стиль для list-group для Articles */
-   .list-group %articles{
-      .list-group-item{
-        background: red;
-        border: 1px double;
-        margin: 10px;
-      }
-    }
+  /* Стиль для list-group для Articles на странице Index */
+   #articles {
+     .list-group-item {
+       background: rgba(209, 209, 209, 0.6);
+       margin: 10px;
+     }
+   }
+
 
 
 

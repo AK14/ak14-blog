@@ -11,34 +11,27 @@
             <h2>Последние записи на моем блоге</h2>
             @foreach($articles as $article)
                 <a href="articles/{{$article->id}}" class="list-group-item">
-                <h3 class="list-group-item-heading">{{$article->title}}</h3>
-                <p class="list-group-item-text">{{$article->description}}</p>
-                <p class="text-info">{{$article->author()->name}}
+                    <h3 class="list-group-item-heading">{{$article->title}}</h3>
+                    <p class="list-group-item-text">{{$article->description}}</p>
+                    <p class="text-info">{{$article->author()->name}}
                     в категории:
                     @if(count($article->getCategories()) > 1)
                         @foreach($article->getCategories() as $cat)
                         {{$cat->title}}
                         @endforeach
                     @else
-                     {{$article->getCategories()->first()->title}} </p>
+                     {{$article->getCategories()->first()->title}}
                     @endif
                     {{$article->comments()->count()}}
+                    </p>
                 </a>
             @endforeach
         @endif
     </section>
 
- Нужно вынестиэтот код в оттдельный, подключаемый файл--}}
-    <aside class="col-md-3">
-        <h3>Категории</h3>
-        <div class="list-group">
-        @foreach($categories as $cat)
-            <a href="categories/{{$cat->id}}" class="list-group-item">
-            <h4 class="list-group-item-heading text-right">{{$cat->title}}</h4>
-            </a>
-        @endforeach
-        </div>
+    <aside class="col-md-3" id="right_bar">
+    {{-- выводим список категорий --}}
+    @include('partials/right_bar')
     </aside>
-
 </div>
 @endsection

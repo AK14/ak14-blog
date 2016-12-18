@@ -98,7 +98,9 @@
 }
 
 #right_bar .list-group .list-group-item {
-  background: #eee;
+  height: 30px;
+  border: none;
+  background: inherit;
 }
 
 #right_bar .list-group .list-group-item:hover {
@@ -113,7 +115,12 @@
   color: #c83fba;
 }
 
-/* Стиль для list-group для Articles */
+/* Стиль для list-group для Articles на странице Index */
+#articles .list-group-item {
+  background: rgba(209, 209, 209, 0.6);
+  margin: 10px;
+}
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.

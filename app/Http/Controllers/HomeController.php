@@ -26,10 +26,27 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Articles $articles,Categories $categories,Request $request)
+    public function index(Articles $articles,Categories $categories)
     {
         $articles = $articles->paginate(5);
         $categories = $categories->all();
         return view('home',compact('articles','categories'));
+    }
+
+    public function categories(Articles $articles, Categories $categories)
+    {
+        $art = DB::table('articles')
+            ->join('articles_categories','id','=','id_articles')
+            ->select('id')
+            ->where('id_categories',$categories->id)->get()->pluck('id')
+            ->toArray();
+
+//        dd($art);
+
+          $articles = $articles->whereIn('id',$art)->paginate(5);
+//            dd($articles);
+        $categories = $categories->all();
+        return view('home',compact('articles','categories'));
+
     }
 }

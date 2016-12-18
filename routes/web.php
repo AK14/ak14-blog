@@ -13,6 +13,17 @@
 
 Route::get('/','HomeController@index');
 Route::get('articles/{articles}','articlesController@show');
+Route::get('categories/{categories}','HomeController@categories');
+
+
+// путь для проверки Vue
+Route::get('comments', function(){
+   return App\Comments::all();
+});
+
+Route::get('book',function(){
+    return view('layouts/comments');
+});
 
 
 Auth::routes();
