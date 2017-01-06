@@ -61,6 +61,23 @@
      }
    }
 
+  /* Стиль комментариев для Articles*/
+
+  .articles_comments{
+    background-color: darken($body-bg,3%);
+    font-style: italic;
+      .comment{
+        border-bottom: 1px dotted darken($body-bg,10%);
+        margin-bottom: 5px;
+        .text_info{
+          font-size: 12px;
+        }
+      }
+    .form-control{
+      color:black;
+    }
+  }
+
 
 
 

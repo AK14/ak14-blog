@@ -2,7 +2,7 @@
 $purple:rgb(163,67,158);
 $pink:rgb(255,56,228);
 $beth:mix($purple,$pink,60%);
-$text_gray:rgba(104,104,104,1);
+$text_gray:#524c4c;
 
 $purple_gradient: linear-gradient(48deg,$purple,$beth, $pink);
 
@@ -28,7 +28,7 @@ $brand-danger:  #bf5329;
 
 // Typography
 $font-family-sans-serif: "Arimo", sans-serif;
-$font-size-base: 14px;
+$font-size-base: 16px;
 $line-height-base: 1.6;
 $text-color: $text_gray;
 

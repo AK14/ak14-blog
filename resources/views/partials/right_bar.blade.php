@@ -1,5 +1,5 @@
 
-    <h3>Категории</h3>
+    <h3 class="text-center">Категории</h3>
     <div class="list-group">
         @foreach($categories as $cat)
             <a href="categories/{{$cat->id}}" class="list-group-item">
@@ -7,3 +7,5 @@
             </a>
         @endforeach
     </div>
+
+

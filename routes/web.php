@@ -15,6 +15,8 @@ Route::get('/','HomeController@index');
 Route::get('articles/{articles}','articlesController@show');
 Route::get('categories/{categories}','HomeController@categories');
 
+//путь для записи комментария к определенному посту
+Route::post('articles/{articles}/comments','articlesController@addComment');
 
 // путь для проверки Vue
 Route::get('comments', function(){
