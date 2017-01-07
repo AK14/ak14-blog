@@ -23,9 +23,11 @@
 <body>
      @include('partials/menu')
 
+     <section class="container">
      @yield('content')
+     </section>
 
-    <!-- Scripts -->
+     <!-- Scripts -->
     <script type="text/javascript" src="/js/app.js"> </script>
 </body>
 </html>

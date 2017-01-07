@@ -20,10 +20,13 @@ Route::post('articles/{articles}/comments','articlesController@addComment');
 
 // путь для проверки Vue
 Route::get('comments', function(){
-   return App\Comments::all();
+    $comments =App\Comments::get();
+   return $comments;
 });
 
 Route::get('book',function(){
+
+    
     return view('layouts/comments');
 });
 

@@ -1,24 +1,35 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-<title>book</title>
-</head>
+@extends('layouts.app')
+@section('header')Задачи @endsection
 
-<body class="container">
-<div id="comm">
-    <article v-repeat="comments" >
-        <h3>@{{ date }}</h3>
+@section('content')
+<div id="my_comment">
+    <article >
+        <p> @{{ user }} -- @{{ date }}</p>
         <div class="body">@{{ text }}</div>
     </article>
-    <pre>@{{$data | json }}</pre>
+
+    <tasks :list="tasks"></tasks>
+
+    {{--<pre>@{{$data | json }}</pre>--}}
 
 </div >
 
+<template id="tasks-template">
+    <h1>My tasks (@{{list.length}})</h1>
 
+    <ul>
+        <li :class="{ 'completed':task.completed }"
+            v-for="task in list"
+        @click="task.completed = ! task.completed;"
+        >
+        @{{ task.body }}
+        </li>
+    </ul>
+</template>
+@endsection
 
 {{-- Подключение скрипта для комментариев--}}
 <script type="text/javascript" src="/js/app.js"> </script>
-<script type="text/javascript" src="/js/comments.js"> </script>
 
 </body>
 </html>

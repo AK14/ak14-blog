@@ -3,7 +3,6 @@
 @section('title'){{$articles->title}} @endsection
 
 @section('content')
-<section class="container" >
     <div class="row text-center">
         <h1>{{$articles->title}}</h1>
         <p class="lead">{{$articles->description}}</p>
@@ -45,5 +44,5 @@
             </form>
     </div>
 @endsection
-</section>
+
 
