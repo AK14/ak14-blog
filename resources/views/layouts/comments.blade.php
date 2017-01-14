@@ -10,12 +10,16 @@
 
     <tasks :list="tasks"></tasks>
 
+    <wood>
+
+    </wood>
+
     {{--<pre>@{{$data | json }}</pre>--}}
 
 </div >
 
 <template id="tasks-template">
-    <h1>My tasks (@{{list.length}})</h1>
+    {{--<h1>My tasks (@{{list.length}})</h1>--}}
 
     <ul>
         <li :class="{ 'completed':task.completed }"

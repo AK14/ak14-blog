@@ -21,6 +21,7 @@
     </script>
 </head>
 <body>
+
      @include('partials/menu')
 
      <section class="container">

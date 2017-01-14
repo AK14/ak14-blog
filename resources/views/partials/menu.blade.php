@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header">
@@ -19,7 +18,18 @@
         <div class="collapse navbar-collapse" >
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a href="#">Категории</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"  role="button">
+                        Категории <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" role="menu">
+                        @foreach(App\Categories::all() as $cat)
+                            <li><a href={{route('categories',$cat->id)}}> {{$cat->title}}</a></li>
+                        @endforeach
+                    </ul>
+
+                </li>
                 <li><a href="#">Решения</a></li>
             </ul>
 
@@ -37,16 +47,19 @@
 
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                    <a href="{{ url('/logout') }}"
-                        onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
-                            Выход
-                    </a>
+                            <a href={{url('profile')}}> Профиль</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/logout') }}"
+                                onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                    Выход
+                            </a>
 
-                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                </li>
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
                     </ul>
                 </li>
             @endif

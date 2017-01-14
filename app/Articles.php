@@ -19,11 +19,11 @@ class Articles extends Model
     }
 
     private function categories(){
-        return $this->belongsToMany('App\Categories','articles_categories','id_categories','id_articles')->get();
+        return $this->belongsToMany('App\Categories','articles_categories','id_articles','id_categories');
     }
 
     public function getCategories(){
-        return $this->categories();
+        return $this->categories()->get();
     }
 
     private function comments(){

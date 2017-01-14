@@ -12,11 +12,15 @@
 */
 
 Route::get('/','HomeController@index');
-Route::get('articles/{articles}','articlesController@show');
-Route::get('categories/{categories}','HomeController@categories');
+Route::get('articles/{articles}','articlesController@show')->name('articles');
+Route::get('categories/{categories}','HomeController@categories')->name('categories');
 
 //путь для записи комментария к определенному посту
 Route::post('articles/{articles}/comments','articlesController@addComment');
+
+//профиль пользователя
+Route::get('profile','HomeController@profile')->name('profile');
+
 
 // путь для проверки Vue
 Route::get('comments', function(){
@@ -25,8 +29,6 @@ Route::get('comments', function(){
 });
 
 Route::get('book',function(){
-
-    
     return view('layouts/comments');
 });
 

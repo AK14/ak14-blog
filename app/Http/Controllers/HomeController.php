@@ -1,36 +1,30 @@
 <?php
-
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 // модели
 use App\Articles;
 use App\Categories;
 // подключаем фассад для работы с БД
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
+
     public function __construct()
     {
         $this->middleware('auth');
+
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index(Articles $articles,Categories $categories)
     {
         $articles = $articles->paginate(5);
-        $categories = $categories->all();
-        return view('home',compact('articles','categories'));
+
+        return view('home',compact('articles'));
     }
 
     public function categories(Articles $articles, Categories $categories)
@@ -41,12 +35,14 @@ class HomeController extends Controller
             ->where('id_categories',$categories->id)->get()->pluck('id')
             ->toArray();
 
-//        dd($art);
 
-          $articles = $articles->whereIn('id',$art)->paginate(5);
-//            dd($articles);
-        $categories = $categories->all();
-        return view('home',compact('articles','categories'));
+        $articles = $articles->whereIn('id',$art)->paginate(5);
+        return view('home',compact('articles'));
 
+    }
+
+    public function profile(){
+        $user = Auth::user();
+        return view('layouts/profile',compact('user'));
     }
 }

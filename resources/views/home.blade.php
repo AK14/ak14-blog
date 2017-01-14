@@ -7,21 +7,22 @@
         I am Alexander Konopatsky. I'm 30 yeas old
     </header>
     <section class="list-group col-md-9" id="articles">
-        @if(isset($articles))
+       @if(isset($articles))
             <h2>Последние записи на моем блоге</h2>
             @foreach($articles as $article)
-                <a href="articles/{{$article->id}}" class="list-group-item">
+
+                <a href={{url('articles',$article->id)}} class="list-group-item">
                     <h3 class="list-group-item-heading">{{$article->title}}</h3>
                     <p class="list-group-item-text">{{$article->description}}</p>
                     <p class="text-info">{{$article->getAuthor()->name}}
                     в категории:
-                    @if(count($article->getCategories()) > 1)
-                        @foreach($article->getCategories() as $cat)
-                        {{$cat->title}}
-                        @endforeach
-                    @else
-                     {{$article->getCategories()->first()->title}}
-                    @endif
+                        @if(count($article->getCategories()) > 1)
+                            @foreach($article->getCategories() as $cat)
+                            {{$cat->title}}
+                            @endforeach
+                        @else
+                         {{$article->getCategories()->first()->title}}
+                        @endif
 
                         Комментариев:
                         <span class="badge">
@@ -38,4 +39,6 @@
     @include('partials/right_bar')
     </aside>
 </div>
+
+    <div class="text-center"> {{$articles->links()}}</div>
 @endsection

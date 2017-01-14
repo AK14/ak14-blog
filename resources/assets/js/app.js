@@ -17,6 +17,7 @@ require('./comments.js');
 
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('wood', require('./components/Comments.vue'));
 
 const app = new Vue({
     el: '#app'
