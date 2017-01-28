@@ -2,15 +2,16 @@
 $purple:rgb(163,67,158);
 $pink:rgb(255,56,228);
 $beth:mix($purple,$pink,60%);
+
 $text_gray:#524c4c;
 
 $purple_gradient: linear-gradient(48deg,$purple,$beth, $pink);
 
-$gray: #eee;
+$gray: rgba(242,242,242,1);
 
 
 // Body
-$body-bg: #f2f2f2;
+$body-bg: #ffffff;
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
@@ -78,6 +79,21 @@ $text-color: $text_gray;
       }
     }
   }
+
+
+  //Pagination
+  ul{
+    .pagination{
+      li{
+        a{
+          background-color: $gray !important;
+
+        }
+      }
+
+
+   }}
+
 
 
 

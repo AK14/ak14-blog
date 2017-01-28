@@ -39,6 +39,7 @@
     @include('partials/right_bar')
     </aside>
 </div>
-
-    <div class="text-center"> {{$articles->links()}}</div>
+    <nav aria-label="pagination" class="text-center">
+    <ul class="pagination pagination-sm"> {{$articles->links()}}</ul>
+    </nav>
 @endsection

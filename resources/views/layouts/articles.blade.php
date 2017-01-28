@@ -11,9 +11,11 @@
         <p class="col-md-12">{{$articles->text}}</p>
 
         @foreach($articles->getCategories() as $category)
-            <span class="label label-success">
+
+            <span class="label label-default">
            {{$category->title}}
             </span>
+            &nbsp
         @endforeach
 
     </div>
