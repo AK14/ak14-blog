@@ -24,7 +24,7 @@
 
      @include('partials/menu')
 
-     <section class="container">
+     <section class="container wrapper">
      @yield('content')
      </section>
 

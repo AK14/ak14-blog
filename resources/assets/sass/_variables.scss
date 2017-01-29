@@ -3,15 +3,25 @@ $purple:rgb(163,67,158);
 $pink:rgb(255,56,228);
 $beth:mix($purple,$pink,60%);
 
-$text_gray:#524c4c;
+//$text_gray:#524c4c;
+$text_light:#f1f1f1;
+$text_dark: #530760;
 
 $purple_gradient: linear-gradient(48deg,$purple,$beth, $pink);
 
-$gray: rgba(242,242,242,1);
+$gray: rgba(185,185,185,0.5);
 
 
 // Body
-$body-bg: #ffffff;
+$body-bg: rgba(242,242,242,0.5);
+  body{
+    background-image: url("../../../public/bgImg/purple_gradient.png");
+  };
+
+  .wrapper{
+    background-color: rgba(255,255,255, 0.3);
+    border-radius:20px ;
+  }
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
@@ -31,7 +41,7 @@ $brand-danger:  #bf5329;
 $font-family-sans-serif: "Arimo", sans-serif;
 $font-size-base: 14px;
 $line-height-base: 1.6;
-$text-color: $text_gray;
+$text-color: $text_light;
 
 // Navbar
 .navbar-default{
@@ -58,7 +68,7 @@ $text-color: $text_gray;
       background: $purple_gradient;
     }
     .panel-body{
-      background: rgba(205,205,205,0.6);
+      background-color: darken($body-bg,20%);
 
       input{
         border:none;
@@ -79,20 +89,6 @@ $text-color: $text_gray;
       }
     }
   }
-
-
-  //Pagination
-  ul{
-    .pagination{
-      li{
-        a{
-          background-color: $gray !important;
-
-        }
-      }
-
-
-   }}
 
 
 
