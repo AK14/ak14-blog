@@ -30,7 +30,7 @@
                     </ul>
 
                 </li>
-                <li><a href="#">Решения</a></li>
+                <li><a href="#">Календарь</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->

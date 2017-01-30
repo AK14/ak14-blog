@@ -9,13 +9,13 @@ $text_dark: #530760;
 
 $purple_gradient: linear-gradient(48deg,$purple,$beth, $pink);
 
-$gray: rgba(185,185,185,0.5);
+$gray: rgba(185,185,185,1);
 
 
 // Body
 $body-bg: rgba(242,242,242,0.5);
   body{
-    background-image: url("../../../public/bgImg/purple_gradient.png");
+    background-image: url("../../../public/bgImg/purple_gradient.jpg");
   };
 
   .wrapper{
@@ -90,6 +90,44 @@ $text-color: $text_light;
     }
   }
 
+//  pagination
+ul .pagination{
+  //показывает номер активной страницы
+  .active{
+    span{
+      background-color: rgba(179, 114, 190, 0.6);
+      border-color: white;
+      font-weight: bold;
+      &:hover{
+        background-color: rgba(255,255,255,0.2);
+        border-color: inherit;
+        color: $pink;
+      }
+    }
+  }
+  //не доступная кнопка
+  .disabled{
+    span{
+      background:none;
+      color: $pink;
+      &:hover{
+        background-color: rgba(255,255,255,0.2);
+      }
+    }
+  }
+  //стиль для блока по переходу на другие страницы
+  li{
+    a{
+      background: inherit;
+      color: $purple;
+      &:hover{
+        background-color: rgba(255,255,255,0.2);
+        color: $pink;
+      }
+    }
+
+  }
+}
 
 
 

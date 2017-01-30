@@ -9,6 +9,7 @@ use App\Categories;
 // подключаем фассад для работы с БД
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+//расширение для работы с датой
 
 class HomeController extends Controller
 {
@@ -44,5 +45,10 @@ class HomeController extends Controller
     public function profile(){
         $user = Auth::user();
         return view('layouts/profile',compact('user'));
+    }
+
+    public function calendar(){
+
+        return view('layouts/calendar');
     }
 }

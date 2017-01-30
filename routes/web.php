@@ -21,6 +21,9 @@ Route::post('articles/{articles}/comments','articlesController@addComment');
 //профиль пользователя
 Route::get('profile','HomeController@profile')->name('profile');
 
+//календарь
+Route::get('calendar','HomeController@calendar');
+
 
 // путь для проверки Vue
 Route::get('comments', function(){

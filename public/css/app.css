@@ -1,7 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Arimo|Lato|Open+Sans");
 body {
-  background-image: url("../../../public/bgImg/purple_gradient.png");
+  background-image: url("../../../public/bgImg/purple_gradient.jpg");
 }
 
 .wrapper {
@@ -50,8 +49,39 @@ body {
   background-color: #6d2d69;
 }
 
+ul .pagination .active span {
+  background-color: rgba(179, 114, 190, 0.6);
+  border-color: white;
+  font-weight: bold;
+}
+
+ul .pagination .active span:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: inherit;
+  color: #ff38e4;
+}
+
+ul .pagination .disabled span {
+  background: none;
+  color: #ff38e4;
+}
+
+ul .pagination .disabled span:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+ul .pagination li a {
+  background: inherit;
+  color: #a3439e;
+}
+
+ul .pagination li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ff38e4;
+}
+
 body {
-  background-image: url("../../../public/bgImg/purple_gradient.png");
+  background-image: url("../../../public/bgImg/purple_gradient.jpg");
 }
 
 .wrapper {
@@ -98,6 +128,37 @@ body {
 
 .panel-default .panel-body button:hover {
   background-color: #6d2d69;
+}
+
+ul .pagination .active span {
+  background-color: rgba(179, 114, 190, 0.6);
+  border-color: white;
+  font-weight: bold;
+}
+
+ul .pagination .active span:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: inherit;
+  color: #ff38e4;
+}
+
+ul .pagination .disabled span {
+  background: none;
+  color: #ff38e4;
+}
+
+ul .pagination .disabled span:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+ul .pagination li a {
+  background: inherit;
+  color: #a3439e;
+}
+
+ul .pagination li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ff38e4;
 }
 
 .navbar .navbar-nav .dropdown a:focus {
@@ -163,7 +224,7 @@ body {
 .articles_comments .comment {
   font-size: 16px;
   color: #530760;
-  border-bottom: 1px dotted rgba(185, 185, 185, 0.5);
+  border-bottom: 1px dotted #b9b9b9;
   margin-bottom: 5px;
 }
 
@@ -3198,7 +3259,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(185, 185, 185, 0.5);
+  color: #b9b9b9;
 }
 
 .form-control {
@@ -3208,7 +3269,7 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(185, 185, 185, 0.5);
+  color: #b9b9b9;
   background-color: #fff;
   background-image: none;
   border: 1px solid white;
@@ -4667,7 +4728,7 @@ tbody.collapse.in {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: rgba(185, 185, 185, 0.5);
+  color: #b9b9b9;
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid white;
@@ -4833,7 +4894,7 @@ tbody.collapse.in {
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  color: rgba(185, 185, 185, 0.5);
+  color: #b9b9b9;
   background-color: rgba(242, 242, 242, 0.5);
   border: 1px solid #ddd;
   border-bottom-color: transparent;
