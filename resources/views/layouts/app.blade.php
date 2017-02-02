@@ -23,8 +23,7 @@
 <body>
 
      @include('partials/menu')
-
-     <section class="container wrapper">
+     <section class="container">
      @yield('content')
      </section>
 

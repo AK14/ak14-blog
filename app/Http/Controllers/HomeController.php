@@ -10,7 +10,7 @@ use App\Categories;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 //расширение для работы с датой
-
+use Carbon\Carbon;
 class HomeController extends Controller
 {
 
@@ -48,7 +48,8 @@ class HomeController extends Controller
     }
 
     public function calendar(){
+        $date = Carbon::now('Europe/Minsk');
 
-        return view('layouts/calendar');
+        return view('layouts/calendar', compact('date'));
     }
 }

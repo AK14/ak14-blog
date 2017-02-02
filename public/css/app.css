@@ -17,15 +17,20 @@ body {
   color: white !important;
 }
 
+.panel-default {
+  background: none;
+}
+
 .panel-default .panel-heading {
-  color: white !important;
+  color: #f1f1f1 !important;
   font-size: large;
   background: -webkit-linear-gradient(42deg, #a3439e, #c83fba, #ff38e4);
   background: linear-gradient(48deg, #a3439e, #c83fba, #ff38e4);
 }
 
 .panel-default .panel-body {
-  background-color: rgba(191, 191, 191, 0.5);
+  background: rgba(170, 170, 170, 0.5);
+  color: #530760;
 }
 
 .panel-default .panel-body input {
@@ -98,15 +103,20 @@ body {
   color: white !important;
 }
 
+.panel-default {
+  background: none;
+}
+
 .panel-default .panel-heading {
-  color: white !important;
+  color: #f1f1f1 !important;
   font-size: large;
   background: -webkit-linear-gradient(42deg, #a3439e, #c83fba, #ff38e4);
   background: linear-gradient(48deg, #a3439e, #c83fba, #ff38e4);
 }
 
 .panel-default .panel-body {
-  background-color: rgba(191, 191, 191, 0.5);
+  background: rgba(170, 170, 170, 0.5);
+  color: #530760;
 }
 
 .panel-default .panel-body input {
@@ -192,20 +202,12 @@ ul .pagination li a:hover {
 }
 
 #right_bar .list-group .list-group-item:hover h4 {
-  color: #a3439e;
+  color: #ff05dd;
   background-color: rgba(242, 242, 242, 0.2);
 }
 
 #right_bar h3 {
   margin-bottom: 20px;
-}
-
-.panel .panel-body input {
-  color: black;
-}
-
-.panel a {
-  color: #c83fba;
 }
 
 /* Стиль для list-group для Articles на странице Index */

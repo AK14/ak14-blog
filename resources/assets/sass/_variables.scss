@@ -60,31 +60,34 @@ $text-color: $text_light;
   $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
+
 //  $panel-default-heading-bg: lighten($purple,30%);
-  .panel-default{
-    .panel-heading{
-      color: white !important;
+
+  .panel-default {
+    background: none;
+    .panel-heading {
+      color: $text_light !important;
       font-size: large;
       background: $purple_gradient;
     }
-    .panel-body{
-      background-color: darken($body-bg,20%);
-
-      input{
-        border:none;
-        &:hover{
+    .panel-body {
+      background: rgba(170,170,170,0.5);
+      color: $text_dark;
+      input {
+        border: none;
+        &:hover {
           border: $purple;
         }
-        &:focus{
+        &:focus {
           border: $purple;
         }
       }
 
-      button{
+      button {
         background-color: $purple;
         border: none;
-        &:hover{
-          background-color: darken($purple,15%);
+        &:hover {
+          background-color: darken($purple, 15%);
         }
       }
     }

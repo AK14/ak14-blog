@@ -48,7 +48,7 @@
         }
         &:hover {
           h4{
-            color: $purple;
+            color: darken($pink,10%);
             background-color: rgba(242,242,242,0.2);
           }
         //background: rgba(242,242,242,0.5);
@@ -63,16 +63,7 @@
 
 
 
-  .panel{
-    .panel-body{
-      input{
-        color: black;
-      }
-    }
-    a{
-      color: $beth;
-    }
-  }
+
 
 
   /* Стиль для list-group для Articles на странице Index */
