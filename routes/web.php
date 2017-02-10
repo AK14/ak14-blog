@@ -23,6 +23,8 @@ Route::get('profile','HomeController@profile')->name('profile');
 
 //календарь
 Route::get('calendar','HomeController@calendar');
+// test calendar
+Route::get('t-cal','test@event');
 
 
 // путь для проверки Vue
@@ -34,6 +36,8 @@ Route::get('comments', function(){
 Route::get('book',function(){
     return view('layouts/comments');
 });
+
+
 
 
 Auth::routes();

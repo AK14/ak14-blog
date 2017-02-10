@@ -164,6 +164,11 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
 
+        // приложение календарь
+        MaddHatter\LaravelFullcalendar\ServiceProvider::class,
+        // подключаем Tinker
+        Laravel\Tinker\TinkerServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -227,6 +232,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class
     ],
 
 ];

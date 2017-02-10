@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 //расширение для работы с датой
 use Carbon\Carbon;
+
+// тестовые подключения
+
 class HomeController extends Controller
 {
-
 
     public function __construct()
     {
@@ -23,8 +25,9 @@ class HomeController extends Controller
 
     public function index(Articles $articles,Categories $categories)
     {
-        $articles = $articles->paginate(5);
 
+
+        $articles = $articles->paginate(5);
         return view('home',compact('articles'));
     }
 
