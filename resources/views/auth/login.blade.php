@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <br>
-            <div class="panel panel-default">
+            <div class="panel-default">
                 <div class="panel-heading">Войти на сайт</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
@@ -55,7 +55,7 @@
                                     Войти
                                 </button>
 
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">
+                                <a class="text-purple" href="{{ url('/password/reset') }}">
                                     Забыли пароль?
                                 </a>
                             </div>

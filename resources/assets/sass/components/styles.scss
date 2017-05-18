@@ -1,6 +1,35 @@
 @import "../_variables";
 
-//nav-Bars
+/*
+* Основной фон
+ */
+:root{
+  background-image: $my_bg !important;
+  background-size: cover;
+}
+
+body{
+  background:  none !important;
+};
+
+.wrapper{
+  background-color: rgba(221, 221, 221, 0.6);
+  border-radius:20px ;
+  margin-bottom: 10px;
+  color:$text_dark;
+}
+
+/*
+* стили text-helpers
+ */
+.text-purple {
+  color: $text_dark;
+  &:hover{
+    color: $text_light;
+  }
+}
+
+/* Стили для моих NAVBAR */
 .navbar{
   .navbar-nav{
     .dropdown {
@@ -10,7 +39,10 @@
       }
       }
     }
-    //стили для выпадающего меню
+
+  /*
+  *стили для выпадающего меню
+  */
     .dropdown-menu{
     background: $purple_gradient;
     color: white;
@@ -23,8 +55,91 @@
   }
 }
 
+// navbar-default
+.navbar-default{
+  background: $purple_gradient;
+  border: none !important;
+  a{
+    color: white !important;
+  }
+}
 
-// Стиль HEADER на верху главной страницы страницы ....
+/*
+  * стили для Panels
+  */
+.panel-default {
+  background: none;
+  border: none !important;
+  .panel-heading {
+    color: $text_light !important;
+    font-size: large;
+    background: $purple_gradient !important;
+  }
+  .panel-body {
+    background: rgba(245, 245, 245, 0.5 );
+    font-size: 16px;
+    color: $text_light;
+    .form-control {
+      border-color: $purple;
+    }
+    input {
+      color: $text_dark;
+    }
+
+    button {
+      background-color: $purple;
+      border: none;
+      &:hover {
+        background-color: darken($purple,5%);
+      }
+    }
+  }
+}
+
+/*
+ * стили для pagination
+ */
+ul .pagination{
+  //показывает номер активной страницы
+  .active{
+    span{
+      background-color: rgba(179, 114, 190, 0.6);
+      border-color: white;
+      font-weight: bold;
+      &:hover{
+        background-color: rgba(255,255,255,0.2);
+        border-color: inherit;
+        color: $pink;
+      }
+    }
+  }
+  //не доступная кнопка
+  .disabled{
+    span{
+      background:none;
+      color: $pink;
+      &:hover{
+        background-color: rgba(255,255,255,0.2);
+      }
+    }
+  }
+  //блок по переходу на другие страницы
+  li{
+    a{
+      background: inherit;
+      color: $purple;
+      &:hover{
+        background-color: rgba(255,255,255,0.2);
+        color: $pink;
+      }
+    }
+  }
+}
+
+/*
+*Стиль HEADER на верху главной страницы страницы ....
+*/
+
 .page-header{
   height: 150px;
   width: 95%;
@@ -35,8 +150,9 @@
   border-radius: 10px;
   }
 
-
-// правый сайд-бар
+/*
+* правый сайд-бар
+*/
   #right_bar{
     .list-group{
 
@@ -61,12 +177,9 @@
     }
   }
 
-
-
-
-
-
-  /* Стиль для list-group для Articles на странице Index */
+  /*
+  *Стиль для list-group для Articles на странице Index
+  */
    #articles {
      .list-group-item {
        background: rgba(242,242,242, 1);
@@ -74,8 +187,9 @@
      }
    }
 
-  /* Стиль комментариев для Articles*/
-
+  /*
+  * Стиль комментариев на странице Articles
+  */
   .articles_comments{
     margin: 20px;
     background-color: darken($body-bg,10%);
