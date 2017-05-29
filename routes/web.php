@@ -19,7 +19,8 @@ Route::get('categories/{categories}','HomeController@categories')->name('categor
 Route::post('articles/{articles}/comments','articlesController@addComment');
 
 //профиль пользователя
-Route::get('profile','HomeController@profile')->name('profile');
+Route::get('profile','UserController@profile')->name('profile');
+Route::post('profile/{user}',['uses'=>'UserController@avatar', 'as'=>'photo']);
 
 //календарь
 Route::get('calendar','HomeController@calendar');

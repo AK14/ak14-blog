@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Classes\Photo;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -27,4 +28,22 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function photo()
+    {
+        return $this->hasOne(Photo::class,'id_user','id');
+    }
+
+    public function attachPhoto($photo)
+    {
+        return $this->photo()->save($photo);
+    }
+
+    public function updatePhoto($photo)
+    {
+        return $this->photo()->update([
+            'name'    => $photo->name,
+            'path'    => $photo->path,
+            'th_path' => $photo->th_path
+        ]);
+    }
 }

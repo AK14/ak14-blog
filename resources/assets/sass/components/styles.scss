@@ -6,6 +6,7 @@
 :root{
   background-image: $my_bg !important;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 body{
@@ -13,7 +14,7 @@ body{
 };
 
 .wrapper{
-  background-color: rgba(221, 221, 221, 0.6);
+  background-color: rgba(221, 221, 221, 0.4);
   border-radius:20px ;
   margin-bottom: 10px;
   color:$text_dark;
@@ -107,9 +108,9 @@ ul .pagination{
       border-color: white;
       font-weight: bold;
       &:hover{
-        background-color: rgba(255,255,255,0.2);
+        background-color: rgba(255,255,255,0.4);
         border-color: inherit;
-        color: $pink;
+        color: white;
       }
     }
   }
@@ -117,9 +118,9 @@ ul .pagination{
   .disabled{
     span{
       background:none;
-      color: $pink;
+      color: white;
       &:hover{
-        background-color: rgba(255,255,255,0.2);
+        background-color: rgba(255,255,255,1);
       }
     }
   }
@@ -127,9 +128,9 @@ ul .pagination{
   li{
     a{
       background: inherit;
-      color: $purple;
+      color: white;
       &:hover{
-        background-color: rgba(255,255,255,0.2);
+        background-color: rgba(255,255,255,1);
         color: $pink;
       }
     }
