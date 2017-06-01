@@ -20,7 +20,8 @@ Route::post('articles/{articles}/comments','articlesController@addComment');
 
 //профиль пользователя
 Route::get('profile','UserController@profile')->name('profile');
-Route::post('profile/{user}',['uses'=>'UserController@avatar', 'as'=>'photo']);
+Route::get('profile/edit','UserController@edit');
+Route::post('profile/{user}',['uses'=>'UserController@save', 'as'=>'photo']);
 
 //календарь
 Route::get('calendar','HomeController@calendar');

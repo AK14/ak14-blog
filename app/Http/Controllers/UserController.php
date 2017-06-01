@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Image;
 
-
 use Illuminate\Http\Request;
 
 /*
@@ -31,31 +30,59 @@ class UserController extends Controller
         return view('layouts/profile',compact('user'));
     }
 
+    /*
+     * получаем форму для изменения данных пользователя
+     */
+    public function edit()
+    {
+        $user = Auth::user();
+        return view('layouts/profile_edit',compact('user'));
+    }
+
+    /*
+     * сохраняем данные полученые из формы
+     * @param User $user
+     * @param Request $request
+     */
+    public function save(User $user,Request $request)
+    {
+        if (!is_null($request->file('image')))
+        {
+            $this->avatar($user,$request->file('image'));
+        }
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->weight = $request->weight;
+        $user->height = $request->height;
+        $user->save();
+
+        return redirect()->route('profile');
+    }
 
     /**
      * Создаем аватар пользователя
      * @param User $user
-     * @param Request $request получаем файл из формы
+     * @param UploadedFile $file получаем файл из формы
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function avatar(User $user, Request $request)
+    public function avatar(User $user,UploadedFile $file)
     {
         $this->user = $user;
-        if (!$request->file('image'))
+        if (!$file)
         {
             return redirect()->back();
         }elseif (isset($this->user->photo->name)) // если у пользователя уже есть аватар
         {
             unlink($this->user->photo->path); // удаляем существующий аватар пользователя
             unlink($this->user->photo->th_path); // удаляем существующий мини_аватар пользователя
-            $photo = $this->create_avatar($request->file('image'));
+            $photo = $this->create_avatar($file);
             $this->user->updatePhoto($photo);
-            return redirect()->route('profile');
         }else
         {
-            $photo = $this->create_avatar($request->file('image'));
+            $photo = $this->create_avatar($file);
             $this->user->attachPhoto($photo);
-            return redirect()->route('profile');
         }
     }
 
@@ -72,6 +99,9 @@ class UserController extends Controller
         return $avatar;
     }
 
+    /*
+     * создаем новый объект Photo
+     */
     private function newPhoto()
     {
        return new Photo([
@@ -99,7 +129,7 @@ class UserController extends Controller
      */
     private function makeThumbnail($file, $to)
     {
-        Image::make($file)->fit(120)->save($to,100);
+        Image::make($file)->fit(150)->save($to,100);
     }
 
 }
